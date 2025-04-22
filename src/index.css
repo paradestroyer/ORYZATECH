@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 33% 99%;
+    --foreground: 20 14.3% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+
+    --primary: 84 70% 28%;
+    --primary-foreground: 60 9.1% 97.8%;
+
+    --secondary: 60 54.3% 87.8%;
+    --secondary-foreground: 24 39.3% 11.2%;
+
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+
+    --accent: 48 96.5% 53.3%;
+    --accent-foreground: 24 9.8% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 24 5.4% 63.9%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 60 33% 98%;
+    --sidebar-foreground: 20 14.3% 4.1%;
+    --sidebar-primary: 84 70% 28%;
+    --sidebar-primary-foreground: 60 9.1% 97.8%;
+    --sidebar-accent: 60 4.8% 95.9%;
+    --sidebar-accent-foreground: 24 9.8% 10%;
+    --sidebar-border: 20 5.9% 90%;
+    --sidebar-ring: 24 5.4% 63.9%;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+
+    --primary: 84 70% 28%;
+    --primary-foreground: 60 9.1% 97.8%;
+
+    --secondary: 12 6.5% 15.1%;
+    --secondary-foreground: 60 9.1% 97.8%;
+
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+
+    --accent: 48 96.5% 50%;
+    --accent-foreground: 20 14.3% 4.1%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 24 5.4% 63.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .oryza-card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-gray-100;
+  }
+  
+  .oryza-button {
+    @apply rounded-lg px-4 py-2 transition-all duration-300 font-medium;
+  }
+  
+  .oryza-button-primary {
+    @apply bg-oryza-green text-white hover:bg-oryza-green-dark oryza-button;
+  }
+  
+  .oryza-button-secondary {
+    @apply bg-oryza-yellow text-oryza-brown-dark hover:bg-oryza-yellow-dark oryza-button;
+  }
+  
+  .oryza-input {
+    @apply rounded-lg border border-gray-200 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-oryza-green focus:border-transparent;
+  }
+  
+  .oryza-select {
+    @apply rounded-lg border border-gray-200 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-oryza-green focus:border-transparent;
+  }
+  
+  .oryza-label {
+    @apply text-sm font-medium text-gray-700 mb-1;
+  }
+  
+  .oryza-heading {
+    @apply text-3xl font-bold text-oryza-brown-dark;
+  }
+  
+  .oryza-subheading {
+    @apply text-xl font-semibold text-oryza-brown;
+  }
+}
